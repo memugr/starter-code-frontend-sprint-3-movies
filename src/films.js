@@ -30,7 +30,7 @@ function moviesAverageOfDirector(movies, director) {
   return averageScore.toFixed(2)
 }
 
-// Exercise 4:  Alphabetic order by title 
+// Exercise 4: Alphabetic order by title 
 function orderAlphabetically(movies) {
   let result = movies.map(movie => movie.title)
   result.sort((a, b) => a.toLowerCase().localeCompare(b.toLowerCase()))
@@ -41,8 +41,19 @@ function orderAlphabetically(movies) {
 }
 
 // Exercise 5: Order by year, ascending
-function orderByYear() {
+function orderByYear(movies) {
+  let result = [...movies] // A copy of the array
 
+  result.sort((a, b) => {
+    if (a.year === b.year) {
+      // Sorting the titles alphabetically if the years of movies are the same
+      return a.title.localeCompare(b.title)
+    }
+    return a.year - b.year
+  });
+
+  console.log("Exercise 5", result)
+  return result
 }
 
 // Exercise 6: Calculate the average of the movies in a category
