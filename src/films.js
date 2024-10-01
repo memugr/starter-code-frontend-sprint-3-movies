@@ -16,18 +16,12 @@ function getMoviesFromDirector(movies, director) {
 function moviesAverageOfDirector(movies, director) {
   // Filter movies from given director and calculate total score
   let result = movies.filter(movie => movie.director === director)
-  let scoreDirector = result.reduce((total, movie) => (total + (movie.score || 0), 0))
+  let scoreDirector = result.reduce((total, movie) => total + movie.score, 0)
 
   // Average score
-  let averageScore
-  if (result.length > 0) {
-    averageScore = scoreDirector / result.length
-  } else {
-    averageScore = 0
-  }
-
-  console.log(`Exercice 3 - Average films of ${director}: `, averageScore.toFixed(2))
-  return averageScore.toFixed(2)
+  let averageScore = result.length > 0 ? scoreDirector / result.length : 0
+  console.log(`Exercice 3 `, averageScore.toFixed(2))
+  return parseFloat(averageScore.toFixed(2))
 }
 
 // Exercise 4: Alphabetic order by title 
