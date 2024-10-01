@@ -294,7 +294,7 @@ describe('Function "orderByYear"', () => {
 // YOUR CODE HERE. Test moviesAverageByCategory()
 describe('Function "moviesAverageByCategory"', () => {
   it('ADD YOUR CODE IN films.spec.js file', () => {
-    expect(typeof hoursToMinutes).toBe('coffee');
+    expect(typeof hoursToMinutes).toBe('function');
   });
 });
 
