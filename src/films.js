@@ -29,7 +29,7 @@ function orderAlphabetically(movies) {
   let result = movies.map(movie => movie.title)
   result.sort((a, b) => a.toLowerCase().localeCompare(b.toLowerCase()))
   let order = result.slice(0, 20)
-  
+
   console.log(`Exercice 4`, order)
   return order
 }
@@ -62,8 +62,42 @@ function moviesAverageByCategory() {
 }
 
 // Exercise 7: Modify the duration of movies to minutes
-function hoursToMinutes() {
+function hoursToMinutes(movies) {
+  let movieDuration = movies.map(movie => {
+    
+    // Initial validation of duration
+    if (!movie.duration || movie.duration.trim() === "") {
+      movie.duration = "0min"
+    }
 
+    // Seperate hours and minutes of duration
+    let durationSection = movie.duration.split(" ")
+
+    // Start the minute counting as 0
+    let totalMinutes = 0
+
+    // Loop throught every part and increment 
+    for (const part of durationSection) {
+      switch (true) {
+        case part.includes("h"):
+          totalMinutes += parseInt(part) * 60
+          break;
+        case part.includes("min"):
+          totalMinutes += parseInt(part)
+          break;
+      }
+    }
+
+   // Return the updated movie object with the converted duration in minutes
+    return {
+      ...movie,
+      duration: totalMinutes
+    }
+  })
+
+  // Return the array with all movies with durations converted
+  console.log("Exercise 7 - Duration in minutes", movieDuration)
+  return movieDuration
 }
 
 // Exercise 8: Get the best film of a year
