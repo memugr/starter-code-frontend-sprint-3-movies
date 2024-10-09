@@ -1,14 +1,12 @@
 // Exercise 1: Get the array of all directors.
 function getAllDirectors(movies) {
   let result = movies.map(movie => movie.director);
-  console.log("EXERCICE 1 ->", result);
   return result;
 }
 
 // Exercise 2: Get the films of a certain director
 function getMoviesFromDirector(movies, director) {
   let result = movies.filter(movie => movie.director === director)
-  console.log(`Exercice 2 - Films from ${director}: `, result)
   return result
 }
 
@@ -20,7 +18,6 @@ function moviesAverageOfDirector(movies, director) {
 
   // Average score
   let averageScore = result.length > 0 ? scoreDirector / result.length : 0
-  console.log(`Exercice 3 `, averageScore.toFixed(2))
   return parseFloat(averageScore.toFixed(2))
 }
 
@@ -29,8 +26,6 @@ function orderAlphabetically(movies) {
   let result = movies.map(movie => movie.title)
   result.sort((a, b) => a.toLowerCase().localeCompare(b.toLowerCase()))
   let order = result.slice(0, 20)
-
-  console.log(`Exercice 4`, order)
   return order
 }
 
@@ -46,7 +41,6 @@ function orderByYear(movies) {
     return a.year - b.year
   });
 
-  console.log("Exercise 5", result)
   return result
 }
 
@@ -96,7 +90,6 @@ function hoursToMinutes(movies) {
   })
 
   // Return the array with all movies with durations converted
-  console.log("Exercise 7 - Duration in minutes", movieDuration)
   return movieDuration
 }
 
