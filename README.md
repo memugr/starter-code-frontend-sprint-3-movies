@@ -84,6 +84,7 @@ an array of information about 250 movies.
 - Don't forget to include the capture of the test results in the virtual campus.
 
 ## Tests results
-![Screenshot 2024-10-09 111055](https://github.com/user-attachments/assets/13ce22c7-678d-430b-b20b-75871d22bdd8)
+![Screenshot 2024-10-09 214026](https://github.com/user-attachments/assets/aa5ebe9e-10af-4f8c-8f16-dab0b90497f2)
+![Screenshot 2024-10-09 214048](https://github.com/user-attachments/assets/95d35ca2-5f13-43ec-aeb1-a9a4578f2a27)
 
 
