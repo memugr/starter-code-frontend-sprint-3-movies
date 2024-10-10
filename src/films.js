@@ -13,7 +13,7 @@ function getMoviesFromDirector(movies, director) {
 // Exercise 3: Calculate the average of the films of a given director.
 function moviesAverageOfDirector(movies, director) {
   // Filter movies from given director and calculate total score
-  let result = movies.filter(movie => movie.director === director)
+  let result = getMoviesFromDirector(movies, director)
   let scoreDirector = result.reduce((total, movie) => total + movie.score, 0)
 
   // Average score
@@ -24,9 +24,9 @@ function moviesAverageOfDirector(movies, director) {
 // Exercise 4: Alphabetic order by title 
 function orderAlphabetically(movies) {
   let result = movies.map(movie => movie.title)
-  result.sort((a, b) => a.toLowerCase().localeCompare(b.toLowerCase()))
-  let order = result.slice(0, 20)
-  return order
+    .sort() // sorting alphabetically
+    .slice(0, 20) // returns the top 20
+  return result
 }
 
 // Exercise 5: Order by year, ascending
@@ -56,7 +56,6 @@ function moviesAverageByCategory(movies, genre) {
   // Return the average score rounded to 2 decimal places
   return parseFloat(averageScore.toFixed(2));
 }
-
 
 // Exercise 7: Modify the duration of movies to minutes
 function hoursToMinutes(movies) {
@@ -98,11 +97,13 @@ function hoursToMinutes(movies) {
 
 // Exercise 8: Get the best film of a year
 function bestFilmOfYear(movies, year) {
+  // Filter movies by specified year & sorting in descending order
   let yearsMovies = movies.filter(movie => movie.year === year)
-  yearsMovies.sort((a, b) => b.score - a.score)
+    .sort((a, b) => b.score - a.score)
+  
+  // Get highest score and return the movies with the highest score
   let highestScore = yearsMovies.length > 0 ? yearsMovies[0].score : null
-  let bestFilms = yearsMovies.filter(movie => movie.score === highestScore)
-  return bestFilms
+  return yearsMovies.filter(movie => movie.score === highestScore)
 }
 
 // The following is required to make unit tests work.
