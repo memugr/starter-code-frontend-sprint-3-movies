@@ -293,9 +293,56 @@ describe('Function "orderByYear"', () => {
 // Exercise 6
 // YOUR CODE HERE. Test moviesAverageByCategory()
 describe('Function "moviesAverageByCategory"', () => {
-  it('ADD YOUR CODE IN films.spec.js file', () => {
-    expect(typeof hoursToMinutes).toBe('function');
+  it('should be declared', () => {
+    expect(typeof moviesAverageByCategory).toBe('function');
   });
+
+  it('should return a number', () => {
+    expect(typeof moviesAverageByCategory(movies, 'History')).toBe('number')
+  })
+
+  it('should be different from NaN', () => {
+    expect(moviesAverageByCategory(movies, 'Drama')).not.toBeNaN();
+  });
+
+  it('the second parameter should not be an empty string', () => {
+    expect(moviesAverageByCategory(movies, '')).toBe(Number('0.00'));
+  });
+
+  it('should return the correct average score for Action movies', () => {
+    expect(moviesAverageByCategory([
+      {
+        title: 'Mad Max: Fury Road',
+        year: 2015,
+        director: 'George Miller',
+        duration: '2h',
+        genre: ['Action', 'Adventure'],
+        score: 8.1
+      },
+      {
+        title: 'The Dark Knight',
+        year: 2008,
+        director: 'Christopher Nolan',
+        duration: '2h 32min',
+        genre: ['Action', 'Crime', 'Drama'],
+        score: 9.0
+      }
+    ], 'Action')).toBe(8.55);
+  });
+
+  it('should return 0 when there are no movies in the provided genre', () => {
+    expect(moviesAverageByCategory([
+      {
+        title: 'Inception',
+        year: 2010,
+        director: 'Christopher Nolan',
+        duration: '2h 28min',
+        genre: ['Sci-Fi', 'Thriller'],
+        score: 8.8
+      }
+    ], 'Action')).toBe(0.00);
+  });
+
 });
 
 // Exercise 7
