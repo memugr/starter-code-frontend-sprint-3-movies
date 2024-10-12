@@ -1,90 +1,46 @@
-# Sprint 3 IT Academy | Video management tool
+# Sprint 3 | Video management tool
 
-## Introduction
+## Description
 
-A company in the audiovisual sector has asked us for a web application that will allow their employees to quickly find movies from a large database they have, since the process is currently done manually.
+A company in the audiovisual sector has requested us for a web application that will allow their employees to quickly find movies from a large database they have since the process is currently done manually. 
 
-You will be in charge of setting up the core of the application: all the logic of filtering and sorting of movies. You have 2 weeks to finish, which is how long this sprint lasts.
+This project aims to automate and simplify the movie search process, enhancing the workflow and saving time for the company's employees.
 
-<br>
+## Characteristics
+- Fast and intuitive search feature to locate movies based on various criteria.
+- The movie database is integrated with real-time access.
+- Advanced filtering and sorting option to help users find the relevant content.
+- Handles a large volume of data and performs fast and reliably.  
 
-## Requirements
+## Installation & Running Tests
 
-
-1. Clone this repo
-```bash
-$ git clone https://github.com/IT-Academy-BCN/starter-code-frontend-sprint-3-movies
+1. Clone the repository into your local machine 
+```shell
+$ git clone https://github.com/memugr/starter-code-frontend-sprint-3-movies
 ```
 
-2. Unlink your repo from the itacademy repository
-```bash
-$ git remote rm origin
-```
-
-3. Link your repo to the repository you have to create in your github account
-```bash
-$ git remote add origin <your repo name!>
-```
-
-<br>
-
-## Submission
-
-1. Upon completion, run the following commands:
-
-```bash
-$ git add .
-$ git commit -m "Sprint Solution"
-$ git push origin master
-```
-
-2. Create Pull Request.
-
-3. Upload the link to the virtual campus so that your mentor can correct it and give you feedback.
-
-
-
-<br>
-
-## Introduction
-
-The statement of the exercise is available on the virtual campus.
-
-<br>
-
-## Tests!
-
-
+2. Download all dependencies for the project
 ```shell
 $ npm install
+```
+
+3. Execute the tests
+```shell
 $ npm run test:watch
 ```
 
-And last, open the generated `test-results.html` file with the "Live Server" VSCode extension to see test results.
+4. Once the tests are complete, you can view them by opening the generated `test-results.html`. To do this, make sure you have the "Live Server" extension in Visual Studio Code.
 
-Apart from the statement, you will know exactly what you are asked to do by looking at the file `tests/films.spec.js`, all tests are already defined here!
+## Prerequisites 
+- Ensure that **Node.js** and **NPM** are installed on your local machine. Refer to their [webpage](https://nodejs.org/en/download/package-manager) to download the package.
 
-<br>
-
-## Instructions
-
-You have the following indications from the frontend responsible:
-
-- It is mandatory to implement all loops in ES6 (using map, reduce, filter and sort to manipulate arrays).
-
-- As at the moment we don't consume data from a server using an API, we will work with data from the src/data.js archive. For the moment we will implement the logic using
-an array of information about 250 movies.
-
-- The implementation is about processing this array of movies, to display it as requested in each exercise.
-
-- The logic to implement will be placed in the src/films.js file.
-
-- You don't need to show the result of each function on the screen. Your goal is to pass the tests.  More information on how to program oriented to pass tests at the end of the document.
-
-- Don't forget to include the capture of the test results in the virtual campus.
+## Technologies Used 
+- JavaScript: Core language for the application
+- Node.js & NPM: Server-side JavaScript environment and package manager for managing all the dependencies
+- Jest: Testing framework
+- HTML & CSS: Building and styling the final results
+- Live Server: VSCode extension
 
 ## Tests results
-![Screenshot 2024-10-09 214026](https://github.com/user-attachments/assets/aa5ebe9e-10af-4f8c-8f16-dab0b90497f2)
-![Screenshot 2024-10-09 214048](https://github.com/user-attachments/assets/95d35ca2-5f13-43ec-aeb1-a9a4578f2a27)
-
-
+![Screenshot 2024-10-12 122910](https://github.com/user-attachments/assets/4dcc5ed8-3519-4952-a837-a376d888695c)
+![Screenshot 2024-10-12 122925](https://github.com/user-attachments/assets/5a400804-d71e-4e8d-9d6e-0154e7c5f720)
